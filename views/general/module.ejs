@@ -1,0 +1,35 @@
+<% include ../partials/header %>
+			<div class="container">
+			<% if (currentUser._id.equals("5d4c2ce93aeae5127cf6b9b5")) { %>
+			<% if (module.messages && module.messages.length) { %>
+			<form action="/messagerie/conversations/<%= module._id %>/delete" method="POST"><button style="width: 100%;" class="btn" id="myBtnOutline">Supprimer la conversation</button></form>
+			<% } %>
+			<% } %>
+			<br>
+				<% module.messages.forEach(function(message) { %>
+					<div class="well">
+						<div class="caption-full">
+							<strong><%= message.author.username %></strong>
+							<br>
+							<p><%= message.text %></p>
+							<img src="<%= message.image %>">
+						</div>
+					</div>
+				<% }); %>
+				</div>
+				<div class="container">
+						<div class="thumbnail" id="footer" style="text-align: center; padding: 10px;">
+							<form action="/messagerie/modules/<%= module._id %>/messages" method="POST">
+								<input type="text" maxlength="180" class="form-control" name="message" placeholder="Ajouter votre message:" required>
+								<br>
+								<div class="form-inline">
+									<input type="text" class="form-control pull-left" placeholder="Ajouter une image" name="image" style="width: 90%; margin-right: 10px;">
+									<br>
+									<a href="/messagerie/modules/imagesUpload" class="btn" id="myBtnOutline">Gallerie</a>
+								</div>
+								<br>
+								<button class="btn" id="myBtnOutline" style="padding-left: 50px; padding-right: 50px;">Envoyer</button>
+							</form>
+						</div>
+					</div>
+<% include ../partials/footer %>

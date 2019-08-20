@@ -1,0 +1,21 @@
+<% include ../partials/header %>
+<div class="container">
+		<div class="thumbnail">
+			<div class="container">
+				<div style="padding: 100px; margin-left: 300px;">
+					<div class="thumbnail" style="text-align: center; padding: 50px; width: 40%;">
+						<form action="/messagerie/modules/new" method="POST">
+							<input type="text" name="name" placeholder="Nom du module" class="form-control" >
+							<br>
+							<input type="text" name="enseignant" placeholder="Enseignant du module" class="form-control">
+							<br>
+							<input type="text" name="description" placeholder="Desciption du module" class="form-control">
+							<br>
+							<button class="btn" id="myBtnOutline">Ajouter</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>	
+<% include ../partials/footer %>

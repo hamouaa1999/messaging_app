@@ -1,0 +1,18 @@
+<% include ../partials/header %>
+	<div class="container">
+		<div style="display: flex; flex-wrap: wrap;">
+			<% modules.forEach(function(module){ %>
+			<div class="col-md-3">
+				<div class="card" style="width: 18rem; margin-bottom: 10px;">
+				  <div class="card-body">
+				    <h5 class="card-title" style="font-family: fantasy;"><%= module.name %></h5>
+				    <h6 class="card-subtitle mb-2 text-muted"><%= module.enseignant %></h6>
+				    <p class="card-text" id="paragraph"><%= module.description %></p>
+				    <a href="/messagerie/modules/<%= module._id %>/messages" class="btn" id="myBtnOutline">Voir les Messages</a>
+				  </div>
+				</div>
+			</div>
+			<% }); %>
+		</div>	
+	</div>
+<% include ../partials/footer %>

@@ -1,0 +1,47 @@
+#inlineDiv {
+	display: inline;
+}
+
+.anchor {
+	color: white;
+}
+
+#myBtnOutline {
+  color: #2A2327;
+  background-color: transparent;
+  background-image: none;
+  border-color: #2A2327;
+}
+
+#myBtnOutline:hover {
+  color: #fff;
+  background-color: #2A2327;
+  border-color: #2A2327;
+}
+
+#footer {
+    bottom: 0;
+    width: 100%;
+}
+
+#paragraph {
+    font-size: 13px; 
+}
+
+#suprimButton {
+  margin-right: 10px;
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
+}
+
+#suprimButton:hover {
+  color: #24408c;
+  text-decoration: underline;
+}
+
+#suprimmButton {
+  margin-left: 200px;
+  margin-right: 200px;
+  color: red;
+}

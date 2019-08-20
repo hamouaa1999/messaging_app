@@ -1,0 +1,22 @@
+<% include ../partials/header %>
+<div class="container">
+	<form action="/upload" method="POST" enctype="multipart/form-data">
+		<input class="form-control" type="file" name="file">
+		<br>
+		<button class="btn btn-warning">Submit</button>
+	</form>
+	<div style="display: flex; flex-wrap: wrap;">
+	<% if (files) { %>
+	<% files.forEach(function(file) { %>
+		<% if (file.isImage) { %>
+		<div class="col-md-3">
+			<img src="/messagerie/modules/images/<%= file.filename %>" class="img-thumbnail">			
+		</div>
+		<% } else { %>
+		<p> It is not an image </p>
+		<% } %>	
+		<% }); %>
+		<% } %>
+	</div>
+</div>
+<% include ../partials/footer %>
